@@ -48,10 +48,23 @@ const LoginForm = () => {
     );
   };
 
-  const submitForm = (event) => {
+  const submitForm = async(event) => {
     event.preventDefault();
 
-    // const apiUrl = ""
+    const userDetails = {username,password}
+    const loginApiUrl = 'https://apis.ccbp.in/login'
+    const options = {
+        method : "POST",
+        body : JSON.stringify(userDetails)
+    }
+
+    const response = await fetch(loginApiUrl,options)
+    const responseData = response.json();
+    console.log(responseData);
+    if(response.ok == true){
+        console.log("login successfull")
+    }
+
   };
 
   return (
