@@ -25,6 +25,7 @@ const LoginForm = () => {
           id="username"
           value={username}
           onChange={onChangeUsername}
+          placeholder="UserName"
         />
       </>
     );
@@ -41,6 +42,7 @@ const LoginForm = () => {
           id="password"
           value={password}
           onChange={onChangePassword}
+          placeholder="Password"
         />
       </>
     );
@@ -48,6 +50,8 @@ const LoginForm = () => {
 
   const submitForm = (event) => {
     event.preventDefault();
+
+    // const apiUrl = ""
   };
 
   return (
