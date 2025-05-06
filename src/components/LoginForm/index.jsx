@@ -77,6 +77,7 @@ const LoginForm = () => {
     if (response.ok == true) {
       console.log("login successfull");
       console.log(data.jwt_token);
+      Cookies.set('jwtToken',data.jwt_token);
       onsubmitSuccess(data.jwt_token);
     } else {
       onsubmitFailure(data.error_msg);
