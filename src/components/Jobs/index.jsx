@@ -1,5 +1,6 @@
 import Cookies from "js-cookie"
 import { useState,useEffect } from "react"
+import FiltersGroup from "../FiltersGroup"
 import Header from "../Header"
 
 
@@ -82,9 +83,9 @@ const Jobs = () => {
         setSearchInput(event.target.value)
       }
     
-      const onKeyDownSearchInput = event => {
-        if (event.key === 'Enter') getJobs()
-      }
+    //   const onKeyDownSearchInput = event => {
+    //     if (event.key === 'Enter') getJobs()
+    //   }
     
       const onClickSearch = () => {
         getJobs()
