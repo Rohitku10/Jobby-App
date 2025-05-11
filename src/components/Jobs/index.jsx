@@ -2,6 +2,7 @@ import Cookies from "js-cookie"
 import { useState,useEffect } from "react"
 import FiltersGroup from "../FiltersGroup"
 import Header from "../Header"
+import JobCard from "../JobCard"
 
 
 const apiStatusConstants = {
@@ -38,7 +39,7 @@ const Jobs = () => {
     
     
       const getJobs = async() => {
-        const jwtToken = Cookies.get(jwtToken)
+        const jwtToken = Cookies.get('jwt_token')
         const employmentString = employmentType.join(',')
         const url = `https://apis.ccbp.in/jobs?employment_type=${employmentString}&minimum_package=${salaryRange}&search=${searchInput}`
         const options = {
