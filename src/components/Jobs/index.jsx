@@ -153,7 +153,7 @@ const Jobs = () => {
                 <FiltersGroup
                     employmentTypesList={employmentTypesList}
                     salaryRangesList={salaryRangesList}
-                    changeEmployeeList={e => onChangeEmployment(e.target.value)}
+                    changeEmployeeList={onChangeEmployment}
                     changeSalary={onChangeSalary}
                     searchInput={searchInput}
                     changeSearchInput={onChangeSearchInput}
