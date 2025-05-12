@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react'
 import Cookies from 'js-cookie'
 // import {TailSpin} from 'react-loader-spinner'
-// import './index.css'
+import './index.css'
 
 const apiStatusConstants = {
   initial: 'INITIAL',

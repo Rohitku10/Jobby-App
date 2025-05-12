@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { FaStar } from 'react-icons/fa'
 import { MdLocationOn } from 'react-icons/md'
 import { BsBriefcaseFill } from 'react-icons/bs'
-// import './index.css'
+import './index.css'
 
 const JobCard = props => {
   const { jobData } = props

@@ -1,6 +1,6 @@
 import {BsSearch} from 'react-icons/bs'
 import ProfileDetails from '../ProfileDetails'
-// import './index.css'
+import './index.css'
 
 const FiltersGroup = props => {
   const {
@@ -17,33 +17,33 @@ const FiltersGroup = props => {
     changeSearchInput(event)
   }
 
-  const onEnterSearchInput = event => {
-    if (event.key === 'Enter') {
-      getJobs()
-    }
-  }
+  // const onEnterSearchInput = event => {
+  //   if (event.key === 'Enter') {
+  //     getJobs()
+  //   }
+  // }
 
-  const renderSearchInput = () => (
-    <div className="search-input-container">
-      <input
-        type="search"
-        className="search-input"
-        placeholder="Search"
-        value={searchInput}
-        onChange={onChangeSearchInput}
-        onKeyDown={onEnterSearchInput}
-      />
-      <button
-        type="button"
-        data-testid="searchButton"
-        aria-label="Save"
-        className="search-button-container"
-        onClick={getJobs}
-      >
-        <BsSearch className="search-icon" />
-      </button>
-    </div>
-  )
+  // const renderSearchInput = () => (
+  //   <div className="search-input-container">
+  //     <input
+  //       type="search"
+  //       className="search-input"
+  //       placeholder="Search"
+  //       value={searchInput}
+  //       onChange={onChangeSearchInput}
+  //       onKeyDown={onEnterSearchInput}
+  //     />
+  //     <button
+  //       type="button"
+  //       data-testid="searchButton"
+  //       aria-label="Save"
+  //       className="search-button-container"
+  //       onClick={getJobs}
+  //     >
+  //       <BsSearch className="search-icon" />
+  //     </button>
+  //   </div>
+  // )
 
   const onSelectEmployeeType = event => {
     changeEmployeeList(event.target.value)
@@ -98,7 +98,7 @@ const FiltersGroup = props => {
 
   return (
     <div className="filters-group-container">
-      {renderSearchInput()}
+      {/* {renderSearchInput()} */}
       <ProfileDetails />
       <hr className="horizontal-line" />
       {renderTypeOfEmployment()}
