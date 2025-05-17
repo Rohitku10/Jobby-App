@@ -152,10 +152,48 @@ const Jobs = () => {
   };
 
   return (
+    // <>
+    //   <Header />
+    //   <div className="jobs-container">
+    //     <div className="jobs-content">
+          // <FiltersGroup
+          //   employmentTypesList={employmentTypesList}
+          //   salaryRangesList={salaryRangesList}
+          //   changeEmployeeList={onChangeEmployment}
+          //   changeSalary={onChangeSalary}
+          //   searchInput={searchInput}
+          //   changeSearchInput={onChangeSearchInput}
+          //   getJobs={onClickSearch}
+          // />
+    //     </div>
+    //     <div className="search-input-jobs-list-container">
+    //       <div className="search-input-container-desktop">
+            // <input
+            //   type="search"
+            //   className="search-input-desktop"
+            //   placeholder="Search"
+            //   value={searchInput}
+            //   onChange={onChangeSearchInput}
+            //   onKeyDown={onEnterSearchInput}
+            // />
+    //         <button
+    //           type="button"
+    //           data-testid="searchButton"
+    //           aria-label="Save"
+    //           className="search-button-container-desktop"
+    //           onClick={getJobs}
+    //         >
+    //           <BsSearch className="search-icon-desktop" />
+    //         </button>
+    //       </div>
+    //       <div className="jobs-list-section">{renderAllJobs()}</div>
+    //     </div>
+    //   </div>
+    // </>
     <>
-      <Header />
-      <div className="jobs-container">
-        <div className="jobs-content">
+        <Header />
+        <div className="jobs-container">
+          <div className="jobs-content">
           <FiltersGroup
             employmentTypesList={employmentTypesList}
             salaryRangesList={salaryRangesList}
@@ -165,10 +203,9 @@ const Jobs = () => {
             changeSearchInput={onChangeSearchInput}
             getJobs={onClickSearch}
           />
-        </div>
-        <div className="search-input-jobs-list-container">
-          <div className="search-input-container-desktop">
-            <input
+            <div className="search-input-jobs-list-container">
+              <div className="search-input-container-desktop">
+              <input
               type="search"
               className="search-input-desktop"
               placeholder="Search"
@@ -176,20 +213,21 @@ const Jobs = () => {
               onChange={onChangeSearchInput}
               onKeyDown={onEnterSearchInput}
             />
-            <button
-              type="button"
-              data-testid="searchButton"
-              aria-label="Save"
-              className="search-button-container-desktop"
-              onClick={getJobs}
-            >
-              <BsSearch className="search-icon-desktop" />
-            </button>
+                <button
+                  type="button"
+                  data-testid="searchButton"
+                  aria-label="Save"
+                  className="search-button-container-desktop"
+                  onClick={getJobs}
+                >
+                  <BsSearch className="search-icon-desktop" />
+                </button>
+              </div>
+              {renderAllJobs()}
+            </div>
           </div>
-          <div className="jobs-list-section">{renderAllJobs()}</div>
         </div>
-      </div>
-    </>
+      </>
   );
 };
 

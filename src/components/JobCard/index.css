@@ -1,12 +1,6 @@
 .link-item {
     text-decoration: none;
   }
-  .job-card{
-    background-color: #202020;
-    color: white;
-    list-style-type: none;
-    padding: 10px;
-  }
   .job-item {
     display: flex;
     flex-direction: column;
