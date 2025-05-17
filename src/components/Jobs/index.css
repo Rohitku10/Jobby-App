@@ -22,9 +22,6 @@
     width: 90%;
   }
 
-  /* .jobs-container{
-    flex-direction: row;
-  } */
 }
 .loader-container {
   display: flex;
