@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react'
 import Cookies from 'js-cookie'
-// import {TailSpin} from 'react-loader-spinner'
+import {ThreeDots} from 'react-loader-spinner'
 import './index.css'
 
 const apiStatusConstants = {
@@ -62,11 +62,18 @@ const ProfileDetails = () => {
     </div>
   )
 
-//   const renderLoadingView = () => (
-//     <div className="profile-loader-container" data-testid="loader">
-//       <TailSpin height={50} width={50} color="#ffffff" />
-//     </div>
-//   )
+  const renderLoadingView = () => (
+    <div className="profile-loader-container" data-testid="loader">
+      <ThreeDots
+      height="50"
+      width="50"
+      radius="9"
+      color="#ffffff"
+      ariaLabel="three-dots-loading"
+      visible={true}
+    />
+    </div>
+  )
 
   const renderProfileDetails = () => {
     switch (apiStatus) {
@@ -74,8 +81,8 @@ const ProfileDetails = () => {
         return renderProfileView()
       case apiStatusConstants.failure:
         return renderFailureView()
-    //   case apiStatusConstants.inProgress:
-    //     return renderLoadingView()
+      case apiStatusConstants.inProgress:
+        return renderLoadingView()
       default:
         return null
     }

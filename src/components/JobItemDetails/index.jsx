@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 import Cookies from 'js-cookie'
-// import Loader from 'react-loader-spinner'
+import { ThreeDots } from 'react-loader-spinner'
 import {BsFillBriefcaseFill, BsStarFill} from 'react-icons/bs'
 import {BiLinkExternal} from 'react-icons/bi'
 import {MdLocationOn} from 'react-icons/md'
@@ -109,7 +109,14 @@ const JobItemDetails = () => {
 
   const renderLoadingView = () => (
     <div className="job-item-loader-container" data-testid="loader">
-      <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
+      <ThreeDots
+      height="50"
+      width="50"
+      radius="9"
+      color="#ffffff"
+      ariaLabel="three-dots-loading"
+      visible={true}
+    />
     </div>
   )
 
@@ -207,8 +214,8 @@ const JobItemDetails = () => {
         return renderJobDetailsView()
       case apiStatusConstants.failure:
         return renderFailureView()
-      // case apiStatusConstants.inProgress:
-      //   return renderLoadingView()
+      case apiStatusConstants.inProgress:
+        return renderLoadingView()
       default:
         return null
     }

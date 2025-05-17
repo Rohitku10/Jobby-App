@@ -5,6 +5,7 @@ import Header from "../Header";
 import JobCard from "../JobCard";
 import { BsSearch } from "react-icons/bs";
 import "./index.css";
+import { ThreeDots } from "react-loader-spinner";
 
 const apiStatusConstants = {
   initial: "INITIAL",
@@ -140,56 +141,26 @@ const Jobs = () => {
             </button>
           </div>
         );
-      //   case apiStatusConstants.inProgress:
-      //     return (
-      //       <div className="loader-container" data-testid="loader">
-      //         <ThreeDots height="50" width="50" color="#ffffff" visible />
-      //       </div>
-      //     )
+        case apiStatusConstants.inProgress:
+          return (
+            <div className="loader-container" data-testid="loader">
+              <ThreeDots
+      height="50"
+      width="50"
+      radius="9"
+      color="#ffffff"
+      ariaLabel="three-dots-loading"
+      visible={true}
+    />
+            </div>
+          )
       default:
         return null;
     }
   };
 
   return (
-    // <>
-    //   <Header />
-    //   <div className="jobs-container">
-    //     <div className="jobs-content">
-          // <FiltersGroup
-          //   employmentTypesList={employmentTypesList}
-          //   salaryRangesList={salaryRangesList}
-          //   changeEmployeeList={onChangeEmployment}
-          //   changeSalary={onChangeSalary}
-          //   searchInput={searchInput}
-          //   changeSearchInput={onChangeSearchInput}
-          //   getJobs={onClickSearch}
-          // />
-    //     </div>
-    //     <div className="search-input-jobs-list-container">
-    //       <div className="search-input-container-desktop">
-            // <input
-            //   type="search"
-            //   className="search-input-desktop"
-            //   placeholder="Search"
-            //   value={searchInput}
-            //   onChange={onChangeSearchInput}
-            //   onKeyDown={onEnterSearchInput}
-            // />
-    //         <button
-    //           type="button"
-    //           data-testid="searchButton"
-    //           aria-label="Save"
-    //           className="search-button-container-desktop"
-    //           onClick={getJobs}
-    //         >
-    //           <BsSearch className="search-icon-desktop" />
-    //         </button>
-    //       </div>
-    //       <div className="jobs-list-section">{renderAllJobs()}</div>
-    //     </div>
-    //   </div>
-    // </>
+
     <>
         <Header />
         <div className="jobs-container">
