@@ -1,12 +1,54 @@
-# React + Vite
+# 💼 Job Listing Web Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive and secure Job Listing platform built using **React** and **React Router**. Users can search, filter, and view detailed job listings. The application includes protected routes, JWT-based authentication, and dynamic routing.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔗 Live Demo
 
-## Expanding the ESLint configuration
+[👉 Click here to view the deployed site on Netlify](https://your-netlify-url.netlify.app)
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📸 Preview
+
+![App Preview](./screenshots/preview.gif)
+
+---
+
+## 🚀 Features
+
+- 🔐 **JWT Authentication** – Secure login and logout
+- 🔒 **Protected Routes** – Accessible only when authenticated
+- 🏠 **Home Page** – Clean landing screen with navigation
+- 📃 **Jobs Listing** – Search and filter by:
+  - Employment Type (Full Time, Part Time, Internship, Freelance)
+  - Salary Range
+  - Keyword
+- 📄 **Job Details Page** – Detailed view of:
+  - Job Description
+  - Required Skills
+  - Life at Company section
+- ❌ **Not Found Page** – For invalid routes
+- 📱 **Fully Responsive** – Works on all screen sizes
+- ⏳ **Loader Spinner** – Displayed during data fetch
+
+---
+
+## 🛠 Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| **React v19** | UI Library |
+| **React Router v6** | Routing (SPA) |
+| **js-cookie** | Manage JWT tokens |
+| **CSS Modules** | Scoped styling |
+| **react-icons** | Icons |
+| **react-loader-spinner** | Loader component |
+| **Netlify** | Deployment |
+
+---
+
+## 📁 Project Structure
+
+
