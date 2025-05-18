@@ -1,3 +1,6 @@
+usewrname: rahul
+password : rahul@2021
+
 # 💼 Job Listing Web Application
 
 A responsive and secure Job Listing platform built using **React** and **React Router**. Users can search, filter, and view detailed job listings. The application includes protected routes, JWT-based authentication, and dynamic routing.
@@ -49,6 +52,25 @@ A responsive and secure Job Listing platform built using **React** and **React R
 
 ---
 
+
 ## 📁 Project Structure
+
+
+---
+
+## 🧑‍💻 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/job-listing-react-app.git
+cd job-listing-react-app
+
+2. Install Dependencies
+
+npm install --legacy-peer-deps
+If you’re using React 19, some packages like react-loader-spinner may throw peer dependency warnings. Use --legacy-peer-deps to install anyway.
+
+
 
 
